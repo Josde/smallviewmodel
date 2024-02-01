@@ -34,14 +34,14 @@ public abstract class MixinHeldItemRenderer {
         }
     }
 
-//    @Inject(method = "renderFirstPersonItem", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/render/item/HeldItemRenderer;renderArmHoldingItem(Lnet/minecraft/client/util/math/MatrixStack;Lnet/minecraft/client/render/VertexConsumerProvider;IFFLnet/minecraft/util/Arm;)V"))
-//    private void onRenderArm(AbstractClientPlayerEntity player, float tickDelta, float pitch, Hand hand, float swingProgress, ItemStack item, float equipProgress, MatrixStack matrices, VertexConsumerProvider vertexConsumers, int light, CallbackInfo ci) {
-//        matrices.multiply(RotationAxis.POSITIVE_X.rotationDegrees(SmallViewModelConfig.get().rotXArm));
-//        matrices.multiply(RotationAxis.POSITIVE_Y.rotationDegrees(SmallViewModelConfig.get().rotYArm));
-//        matrices.multiply(RotationAxis.POSITIVE_Z.rotationDegrees(SmallViewModelConfig.get().rotZArm));
-//        matrices.scale(SmallViewModelConfig.get().scaleXArm, SmallViewModelConfig.get().scaleYArm, SmallViewModelConfig.get().scaleZArm);
-//        matrices.translate(SmallViewModelConfig.get().posXArm, SmallViewModelConfig.get().posYArm, SmallViewModelConfig.get().posZArm);
-//    }
+   @Inject(method = "renderFirstPersonItem", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/render/item/HeldItemRenderer;renderArmHoldingItem(Lnet/minecraft/client/util/math/MatrixStack;Lnet/minecraft/client/render/VertexConsumerProvider;IFFLnet/minecraft/util/Arm;)V"))
+   private void onRenderArm(AbstractClientPlayerEntity player, float tickDelta, float pitch, Hand hand, float swingProgress, ItemStack item, float equipProgress, MatrixStack matrices, VertexConsumerProvider vertexConsumers, int light, CallbackInfo ci) {
+       matrices.multiply(RotationAxis.POSITIVE_X.rotationDegrees(SmallViewModelConfig.get().rotXArm));
+       matrices.multiply(RotationAxis.POSITIVE_Y.rotationDegrees(SmallViewModelConfig.get().rotYArm));
+       matrices.multiply(RotationAxis.POSITIVE_Z.rotationDegrees(SmallViewModelConfig.get().rotZArm));
+       matrices.scale(SmallViewModelConfig.get().scaleXArm, SmallViewModelConfig.get().scaleYArm, SmallViewModelConfig.get().scaleZArm);
+       matrices.translate(SmallViewModelConfig.get().posXArm, SmallViewModelConfig.get().posYArm, SmallViewModelConfig.get().posZArm);
+   }
 
 
 }
