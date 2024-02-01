@@ -1,5 +1,13 @@
 {
   "text.autoconfig.smallviewmodel.title": "Small View Model Config",
+
+  
+  "text.autoconfig.smallviewmodel.category.General": "General",
+  "text.autoconfig.smallviewmodel.option.useSameScaleForOff.@Tooltip": "If set, use main hand settings for offhand.",
+  "text.autoconfig.smallviewmodel.option.useSameScaleForOff": "Use same scale for off-hand",
+  "text.autoconfig.smallviewmodel.option.useSameScaleForArm.@Tooltip": "If set, use main hand settings for arm. (not recommended)",
+  "text.autoconfig.smallviewmodel.option.useSameScaleForArm": "Use same scale for arm",
+
   "text.autoconfig.smallviewmodel.category.Main Hand": "Main Hand Settings",
   "text.autoconfig.smallviewmodel.option.posXMain.@PrefixText": "Main Hand Position",
   "text.autoconfig.smallviewmodel.option.posXMain": "X Position",
